@@ -4,7 +4,12 @@
     
 
 	<article class="content px-3 py-5 p-md-5">
-		hello
+		<?php
+			if( have_posts() ){
+				the_post();
+				the_content();
+			}
+		?>
 	</article>
 	    
     
