@@ -9,14 +9,10 @@ get_header();
             while( have_posts() ){
                 the_post();
                 
-                get_template_part('template-parts/content', 'archive');
+                get_template_part('template-parts/content', 'article');
             }
         }
 		?>
-
-        <?php
-            the_posts_pagination();
-        ?>
 	</article>
 	    
     

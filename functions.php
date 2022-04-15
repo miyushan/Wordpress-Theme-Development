@@ -61,4 +61,23 @@ function followAndrew_register_scripts(){
 add_action( 'wp_enqueue_scripts', 'followAndrew_register_scripts' );
 
 
+/**
+ * Add widget areas
+ */
+function followAndrew_widget_areas(){
+    register_sidebar(
+        array(
+            'name'          => 'Footer Area',
+            'id'            => 'footer-1',
+            'description'   => 'Footer Widget Area',
+            'before_widget' => '',
+            'after_widget'  => '',
+            'before_title'  => '',
+            'after_title'   => '',
+        ) 
+    );
+}
+add_action('widgets_init', 'followAndrew_widget_areas');
+
+
 ?>
